@@ -47,7 +47,7 @@ class LongWordController < ApplicationController
   end
 
   def get_translation(word)
-    api_key = "YOUR_SYSTRAN_API_KEY"
+    api_key = "743baac2-d874-4ced-a3f1-faddf9671899"
     begin
       response = open("https://api-platform.systran.net/translation/text/translate?source=en&target=fr&key=#{api_key}&input=#{word}")
       json = JSON.parse(response.read.to_s)
