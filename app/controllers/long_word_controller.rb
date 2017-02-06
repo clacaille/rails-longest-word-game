@@ -55,12 +55,10 @@ class LongWordController < ApplicationController
     #     return json['outputs'][0]['output']
     #   end
     # rescue
-      if File.read('/usr/share/dict/words').upcase.split("\n").include? word.upcase
-        return word
-      else
-        return nil
-      end
+    if File.read('/usr/share/dict/words').upcase.split("\n").include? word.upcase
+      return word
+    else
+      return nil
     end
   end
-
 end
